@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col justify-center items-center px-6 bg-black text-white text-center"
+      className="min-h-screen flex flex-col justify-center items-center px-6 bg-[#222] text-white text-center"
     >
       <motion.h1
         initial={{ opacity: 0, y: 30 }}

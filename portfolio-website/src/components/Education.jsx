@@ -22,7 +22,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen bg-[#0a0a0a] text-white py-20 px-6"
+      className="min-h-screen bg-[#222] text-white py-20 px-6"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center">

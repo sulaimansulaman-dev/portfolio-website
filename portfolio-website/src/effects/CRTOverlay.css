@@ -17,6 +17,6 @@
 .fisheye {
   transform: perspective(800px) scale(1.05) rotateX(1deg) rotateY(-1deg);
   filter: contrast(1.2) saturate(1.1) brightness(1.05);
-  border-radius: 50% / 8%;
+  border-radius: 25% / 5%;
   overflow: hidden;
 }

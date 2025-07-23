@@ -1,11 +1,19 @@
 import { useState } from "react";
 import TVFlipTransition from "./effects/TVFlipTransition";
-import ChannelAbout from "./crtcomponents/ChannelAbout";
-import ChannelProjects from "./crtcomponents/ChannelProjects";
-import ChannelExperience from "./crtcomponents/ChannelExperience";
-import ChannelContact from "./crtcomponents/ChannelContact";
 
-const channels = [ChannelAbout, ChannelProjects, ChannelExperience, ChannelContact];
+
+
+import About from "./crtcomponents/ChannelAbout";
+import Experience from "./crtcomponents/ChannelExperience";
+import Projects from "./crtcomponents/ChannelProjects";
+import Education from "./crtcomponents/ChannelEducation.jsx";
+import Skills from "./crtcomponents/ChannelSkills";
+import Contact from "./crtcomponents/ChannelContact";
+
+
+
+
+const channels = [ About, Experience, Projects, Education, Skills, Contact];
 
 export default function ChannelRouter() {
   const [channel, setChannel] = useState(0);
@@ -25,7 +33,7 @@ export default function ChannelRouter() {
     <>
       <button
         onClick={nextChannel}
-        className="fixed top-4 right-4 bg-white px-4 py-2 z-[9999] font-mono"
+        className="fixed bottom-4 right-4 bg-white px-4 py-0 z-[9999] font-mono"
       >
         ▶ Next Channel
       </button>

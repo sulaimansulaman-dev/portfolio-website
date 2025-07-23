@@ -1,28 +1,28 @@
 // components/ChannelExperience.jsx
 const experiences = [
   {
-    title: "Arcademia Game Jam",
+    title: " Arcademia Game Jam, North West University (Potchefstroom)  — Game Developer ",
     company: "NWU (Potchefstroom)",
-    date: "March 2024",
-    desc: "Developed a pixel horror game prototype in a 48-hour jam.",
+    date: "May 2025",
+    desc: "●  Won 1st place at the 2025 Arcademia Game Jam with a network themed twin-stick shooter game built in under 48 hours. \n ●  Collaborated with a team, built using  GameMaker Studio with Game Maker Language \n https://github.com/sulaimansulaman-dev/ip-conflict-arcademia-game-jam ",
   },
-  {
-    title: "Freelance Developer",
-    company: "Remote",
-    date: "2023 - Present",
-    desc: "Built custom websites and interactive UIs for clients.",
-  },
+
 ];
 
 export default function ChannelExperience() {
   return (
-    <div className="w-full h-full bg-black text-purple-300 font-mono p-6">
-      <div className="text-purple-400 text-xl mb-4">📺 Channel 3: EXPERIENCE</div>
+    <div className="w-full h-full bg-grey text-green-300 font-mono p-6">
+      <div className="text-green-400 text-xl mb-4"> Channel 2: EXPERIENCE</div>
       {experiences.map((exp, i) => (
-        <div key={i} className="mb-4 border-l-4 border-purple-600 pl-4">
-          <div className="text-purple-200 text-lg">{exp.title}</div>
-          <div className="text-purple-400 text-sm italic">{exp.company} — {exp.date}</div>
-          <div className="text-sm">{exp.desc}</div>
+        <div key={i} className="mb-4 border-l-4 border-green-600 pl-4">
+          <div className="text-green-200 text-lg">{exp.title}</div>
+          <div className="text-green-400 text-sm italic">{exp.company} — {exp.date}</div>
+          <div className="text-sm">
+  {exp.desc.split('\n').map((line, index) => (
+    <div key={index}>{line}</div>
+  ))}
+</div>
+
         </div>
       ))}
     </div>
