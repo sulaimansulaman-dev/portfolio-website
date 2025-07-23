@@ -1,38 +1,42 @@
 import { motion } from "framer-motion";
 
-const experiences = [
+const education = [
   {
-    title: "Arcademia Game Jam",
-    company: "North West University (Potchefstroom)",
-    date: "MAY 2025",
+    title: "BSc Information Technology",
+    institution: "North West University (Potchefstroom)",
+    date: "FEB 2023 - NOV 2025 (Expected)",
     description:
-      "● Won 1st place at the 2025 Arcademia Game Jam with a network-themed twin-stick shooter game built in under 48 hours.\n ● Collaborated with a team, built using GameMaker Studio with Game Maker Language."
-  }
+      " GPA:65.40% \n  ●  Coursework: Programming, Databases, Data Structures and Algorithms, Artificial Intelligence, Systems Analysis and Design, Operating Systems, Information Security, Computer Networks, and Mathematics."
+  },
+    {
+    title: " National Senior Certificate ",
+    institution: " Hoerskool Standerton",
+    date: "NOV 2022 ",
+    description:
+      "●  Focus Subjects: Mathematics, Physical Sciences, Information Technology, and Engineering Graphics and Design. \n ●  Participated in Coding Events and was an active member of the Robotics Club."
+  },
+  // Add more education entries as needed
 ];
 
-export default function Experience() {
+export default function Education() {
   return (
     <section
-      id="experience"
+      id="education"
       className="min-h-screen bg-[#0a0a0a] text-white py-20 px-6"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center">
-          Experience
+          Education
         </h2>
 
         <div className="relative pl-8 sm:pl-24">
-          {/* Timeline items and line */}
           <div className="relative space-y-16">
-            {/* Vertical line: ends before the last dot */}
             <div
-              className="absolute left-[120px] top-0 w-[2px] bg-indigo-600"
-              style={{
-                height: `calc(100% - 2.5rem)`, // Adjust 2.5rem to match the spacing to the last dot
-              }}
+              className="absolute left-[120px] top-0 bottom-0 w-[2px] bg-indigo-600"
+              style={{ height: "100%" }}
             />
 
-            {experiences.map((exp, index) => (
+            {education.map((edu, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -42,7 +46,7 @@ export default function Experience() {
               >
                 {/* Date column */}
                 <div className="w-32 text-right pr-4 text-indigo-400 font-medium pt-2">
-                  {exp.date}
+                  {edu.date}
                 </div>
 
                 {/* Dot on the timeline */}
@@ -53,19 +57,17 @@ export default function Experience() {
                 {/* Content */}
                 <div className="flex-1">
                   <h3 className="text-2xl font-semibold text-indigo-300 mb-1">
-                    {exp.title}
+                    {edu.title}
                   </h3>
                   <p className="text-sm text-gray-400 italic mb-2">
-                    {exp.company}
+                    {edu.institution}
                   </p>
                   <p className="text-gray-300 whitespace-pre-line leading-relaxed">
-                    {exp.description}
+                    {edu.description}
                   </p>
                 </div>
               </motion.div>
             ))}
-
-
           </div>
         </div>
       </div>

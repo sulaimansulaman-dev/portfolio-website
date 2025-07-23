@@ -2,20 +2,13 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    
     <section
       id="about"
       className="min-h-screen bg-[#222] text-white flex items-center px-6 sm:px-12 py-20"
     >
- 
-
-
-
-
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT: Text */}
         <div>
-
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-indigo-500">About</span> Me
           </h2>

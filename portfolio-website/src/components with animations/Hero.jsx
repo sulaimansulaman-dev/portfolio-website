@@ -1,4 +1,3 @@
-// Hero.jsx
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -6,76 +5,86 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col justify-center items-center px-6 bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a] text-white text-center"
+      className="min-h-screen flex flex-col justify-center items-center px-6 bg-black text-white text-center"
     >
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-6xl font-extrabold leading-tight"
+        className="text-5xl sm:text-6xl font-extrabold mb-4"
       >
-        Hey, I'm <span className="text-indigo-500">Sulaiman</span>
+        Hello, <span className="text-indigo-500">I'm Sulaiman</span>
       </motion.h1>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="text-2xl sm:text-3xl font-semibold text-gray-300 mb-6"
+      >
+        Final-year BSc IT Student & Aspiring Software Developer
+      </motion.h2>
 
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl"
+        className="text-lg sm:text-xl text-gray-400 max-w-xl mb-10"
       >
-        A passionate full-stack developer crafting clean and scalable web apps.
+        Select a menu option below to explore my portfolio.
       </motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7, duration: 0.8 }}
-        className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+        transition={{ delay: 0.6, duration: 0.8 }}
+        className="flex flex-col gap-4 w-full sm:w-auto items-center"
       >
         <a
           href="#about"
-          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold transition"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold text-lg w-64 transition-all"
         >
           About Me
         </a>
-                <a
+
+        <a
           href="#experience"
-          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold transition"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold text-lg w-64 transition-all"
         >
           Experience
         </a>
-        <a
+                <a
           href="#projects"
-          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold transition"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold text-lg w-64 transition-all"
         >
           Projects
         </a>
-                <a
-          href="#tech-stack"
-          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold transition"
-        >
-          Tech Stack
-        </a>
         <a
+          href="#education"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold text-lg w-64 transition-all"
+        >
+          Education
+        </a>
+                <a
+          href="#skills"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold text-lg w-64 transition-all"
+        >
+          Skills
+        </a>
+                <a
           href="#contact"
-          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold transition"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded text-white font-semibold text-lg w-64 transition-all"
         >
           Contact
         </a>
-        
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="mt-10 flex space-x-6 text-3xl"
-      >
+      <div className="flex justify-center space-x-6 text-3xl mt-12">
         <a
           href="https://github.com/sulaimansulaman-dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-indigo-400 transition"
+          className="hover:text-indigo-400 transition-colors"
         >
           <FaGithub />
         </a>
@@ -83,17 +92,17 @@ export default function Hero() {
           href="https://linkedin.com/in/YOUR-LINKEDIN-USERNAME"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-indigo-400 transition"
+          className="hover:text-indigo-400 transition-colors"
         >
           <FaLinkedin />
         </a>
         <a
           href="mailto:youremail@example.com"
-          className="hover:text-indigo-400 transition"
+          className="hover:text-indigo-400 transition-colors"
         >
           <FaEnvelope />
         </a>
-      </motion.div>
+      </div>
     </section>
   );
 }
