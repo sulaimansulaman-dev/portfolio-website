@@ -6,7 +6,7 @@ const education = [
     institution: "North West University (Potchefstroom)",
     date: "FEB 2023 - NOV 2025 (Expected)",
     description:
-      " GPA:65.40% \n  ●  Coursework: Programming, Databases, Data Structures and Algorithms, Artificial Intelligence, Systems Analysis and Design, Operating Systems, Information Security, Computer Networks, and Mathematics."
+      " GPA: 65.40% \n  ●  Coursework: Programming, Databases, Data Structures and Algorithms, Artificial Intelligence, Systems Analysis and Design, Operating Systems, Information Security, Computer Networks, and Mathematics."
   },
     {
     title: " National Senior Certificate ",
