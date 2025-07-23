@@ -12,5 +12,5 @@ export default function Education() {
         <p>National Senior Certificate, 2022</p>
       </div>
     </section>
-  )
+  );
 }

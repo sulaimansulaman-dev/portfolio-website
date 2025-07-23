@@ -17,5 +17,5 @@ export default function Skills() {
         <li>Problem-Solving</li>
       </ul>
     </section>
-  )
+  );
 }

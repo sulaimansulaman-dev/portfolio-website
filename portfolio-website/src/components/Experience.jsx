@@ -9,5 +9,5 @@ export default function Experience() {
         <li>Built a twin-stick shooter game in under 48 hours.</li>
       </ul>
     </section>
-  )
+  );
 }

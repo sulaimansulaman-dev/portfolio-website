@@ -1,27 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './components/Header'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+// src/App.jsx
+//import Navbar from './components with animations/Navbar';
+import Hero from "./components with animations/Hero";
+import About from "./components with animations/About";
+import Skills from "./components with animations/Skills";
+import Projects from "./components with animations/Projects";
+import Experience from "./components with animations/Experience";
+import Contact from "./components with animations/Contact";
+import Education from "./components with animations/Education";
 
-export default function App() {
+function App() {
   return (
-    <main className="bg-gray-100 text-gray-800 font-sans">
-      <Header />
+    <>
+      {/* <Navbar /> */}
+      <Hero />
       <About />
-      <Skills />
-      <Projects />
       <Experience />
+      <Projects />
       <Education />
+      <Skills />
       <Contact />
-      <Footer />
-    </main>
-  )
+    </>
+  );
 }
+
+export default App;
