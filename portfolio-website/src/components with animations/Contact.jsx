@@ -27,7 +27,7 @@ export default function Contact() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+            href="https://linkedin.com/in/sulaiman-sulaman-013a46319/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-indigo-400"
@@ -35,7 +35,7 @@ export default function Contact() {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:sulaimansulaman@gmail.com"
             className="hover:text-indigo-400"
           >
             <FaEnvelope />
