@@ -68,7 +68,7 @@ export default function CRTContainer({
             {/* Prev Button */}
             <button
               onClick={onPrev}
-              className="bg-gray-300 text-white font-mono px-2 py-0.5 rounded-md text-xs sm:text-sm hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
+              className="bg-gray-300 text-white font-mono px-2 py-0.5 rounded-md text-xs sm:text-sm hover:bg-gray-400 hover:ring-2 hover:ring-green-400 active:ring-2 active:ring-green-600 transition-all"
             >
               ◀ Previous
             </button>
