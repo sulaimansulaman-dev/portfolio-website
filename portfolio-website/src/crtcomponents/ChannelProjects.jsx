@@ -34,7 +34,7 @@ export default function ChannelProjects() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="self-start inline-block mt-2 bg-gray-800 hover:bg-green-600 !text-green-300 hover:!text-white text-xs px-3 py-1 rounded shadow-sm transition-all no-underline"
+              className="self-start inline-block mt-2 bg-gray-800 hover:bg-green-600 text-green-300 hover:!text-white text-xs px-3 py-1 rounded shadow-sm "
             >
               View Project
             </a>

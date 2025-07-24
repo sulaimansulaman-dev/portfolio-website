@@ -24,7 +24,7 @@ export default function CRTContainer({
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full overflow-hidden bg-black">
+    <div ref={containerRef} className="w-full overflow-hidden bg-black fisheye">
       <div className="relative w-full h-full">
         {/* TV Frame */}
         <img
