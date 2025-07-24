@@ -72,6 +72,13 @@ export default function CRTContainer({
             >
               ◀ Previous
             </button>
+                       {/* Next Button */}
+            <button
+              onClick={onNext}
+              className="bg-gray-300 text-white font-mono px-2 py-0.5 rounded-md text-xs sm:text-sm hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
+            >
+              Next ▶
+            </button>
 
             {/* Channel Buttons */}
             {channelNames.map((name, i) => (
@@ -88,13 +95,7 @@ export default function CRTContainer({
               </button>
             ))}
 
-            {/* Next Button */}
-            <button
-              onClick={onNext}
-              className="bg-gray-300 text-white font-mono px-2 py-0.5 rounded-md text-xs sm:text-sm hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
-            >
-              Next ▶
-            </button>
+ 
           </div>
         </div>
       </div>
