@@ -30,7 +30,7 @@ export default function ChannelExperience() {
             rel="noopener noreferrer"
             className="self-start inline-block mt-2 bg-gray-800 hover:bg-green-600 !text-white-300 hover:!text-white text-xs px-3 py-1 rounded shadow-sm transition-all no-underline"
           >
-            View Project →
+            View Project
           </a>
         </div>
       ))}
