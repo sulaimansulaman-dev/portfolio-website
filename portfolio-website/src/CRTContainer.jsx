@@ -35,7 +35,7 @@ export default function CRTContainer({
 
         {/* CRT Screen */}
         <div
-          className="absolute z-20 bg-black text-green-400 font-mono text-sm p-5 leading-relaxed rounded-[20px] overflow-hidden"
+          className="absolute z-20 bg-black text-green-400 font-mono text-sm leading-relaxed rounded-[20px]"
           style={{
             top: "9%",
             left: "2%",
@@ -43,25 +43,26 @@ export default function CRTContainer({
             height: "66%",
           }}
         >
-          <div className="w-full h-full relative fisheye">
+          <div className="relative w-full h-full overflow-y-auto pr-3">
             {children}
-            <div className="crt-effect absolute inset-0" />
+            <div className="crt-effect absolute inset-0 pointer-events-none" />
           </div>
         </div>
 
         {/* Buttons on TV Panel */}
         <div
-          className="absolute z-30 w-full flex justify-center"
+          className="absolute z-30 flex justify-center w-full px-2 sm:px-4"
           style={{
-            bottom: "5%", // fine-tune based on CRTTV.png layout
-            left: "7%",
+            bottom: "6%",
+            left: "0%",
           }}
         >
           <div
-            className="flex flex-wrap justify-center gap-2 px-4"
+            className="flex gap-2 overflow-x-auto px-1 sm:px-4 py-1 w-full max-w-[88%] sm:max-w-[90%]"
             style={{
-              maxWidth: "800px", // wraps after this width
-              width: "100%",
+              justifyContent: "left",
+              flexWrap: "nowrap",
+            
             }}
           >
             {/* Prev Button */}
@@ -77,11 +78,11 @@ export default function CRTContainer({
               <button
                 key={i}
                 onClick={() => onSelectChannel(i)}
-                className={`px-2 py-0.5 rounded-md font-mono text-xs sm:text-sm whitespace-nowrap transition-all ${
-                  currentChannel === i
-                    ? "bg-green-400 text-white shadow-inner ring-2 ring-black"
-                    : "bg-gray-300 text-white hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
-                }`}
+                className={`px-2 py-0.5 rounded-md font-mono text-xs sm:text-sm whitespace-nowrap min-w-fit transition-all ${
+  currentChannel === i
+    ? "bg-green-400 text-white shadow-inner ring-2 ring-black"
+    : "bg-gray-300 text-white hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
+}`}
               >
                 {`Channel ${i + 1}: ${name}`}
               </button>
