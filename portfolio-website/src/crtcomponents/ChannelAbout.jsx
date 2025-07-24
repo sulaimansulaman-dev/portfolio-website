@@ -6,13 +6,15 @@ const lines = [
   "SYSTEM BOOTING...",
   "LOADING PERSONALITY MODULE: SULAIMAN SULAMAN",
   "STATUS: ONLINE",
+  "FLIP THROUGH THE CHANNELS BELOW TO EXPLORE.",
+  "",
   "",
   ">> Hi, I'm Sulaiman Sulaman.",
   ">> I'm a final-year BSc IT student passionate about learning new things, solving problems, and fixing tech. ",
   ">> I enjoy collaborating with others, working hard, and always meeting deadlines.",
   ">> In my free time, you'll find me watching tech videos, playing video games, or taking things apart and putting them back together.",
   "",
-  ">> // Flip to explore.",
+  
 ];
 
 export default function ChannelAbout() {
