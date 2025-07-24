@@ -7,7 +7,7 @@ const skills = [
 
 export default function ChannelSkills() {
   return (
-    <div className="w-full h-full bg-black text-green-300 font-mono p-6">
+    <div className="w-full h-full bg-grey text-green-300 font-mono p-6">
       <div className="text-green-400 text-xl mb-4"> Channel 5: SKILLS</div>
       <div className="text-sm flex flex-wrap gap-2">
         {skills.map((skill, index) => (

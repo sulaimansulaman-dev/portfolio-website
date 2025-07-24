@@ -25,7 +25,6 @@ export default function CRTContainer({ children }) {
           alt="CRT TV"
           className="absolute inset-0 w-full h-full object-fill z-10 pointer-events-none"
         />
-        
 
         {/* CRT screen content area */}
         <div

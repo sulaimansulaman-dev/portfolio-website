@@ -41,7 +41,9 @@ export default function Projects() {
               <p className="text-sm text-gray-400 italic mb-2">
                 {exp.date}
               </p>
-              <p className="text-gray-300 leading-relaxed whitespace-pre-line">{exp.description}</p>
+              <p className="text-gray-300 leading-relaxed whitespace-pre-line break-words overflow-x-auto max-w-full">
+                {exp.description}
+              </p>
             </motion.div>
           ))}
         </div>
