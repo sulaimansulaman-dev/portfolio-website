@@ -7,6 +7,15 @@ export default function App() {
   const [flipping, setFlipping] = useState(false);
   const TOTAL_CHANNELS = 6;
 
+  const channelNames = [
+    "About",
+    "Experience",
+    "Projects",
+    "Education",
+    "Skills",
+    "Contact",
+  ];
+
   const nextChannel = () => {
     setFlipping(true);
     setTimeout(() => {
@@ -38,6 +47,7 @@ export default function App() {
       onPrev={prevChannel}
       onSelectChannel={selectChannel}
       currentChannel={channel}
+      channelNames={channelNames}  // <-- pass channel names here
     >
       <ChannelRouter channel={channel} flipping={flipping} />
     </CRTContainer>

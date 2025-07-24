@@ -1,7 +1,5 @@
-
-import { useState,useRef,useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import TVFlipTransition from "./effects/TVFlipTransition";
-import About from "./crtcomponents/ChannelAbout";
 
 export default function CRTContainer({
   children,
@@ -9,6 +7,7 @@ export default function CRTContainer({
   onPrev,
   onSelectChannel,
   currentChannel,
+  channelNames,
 }) {
   const containerRef = useRef(null);
 
@@ -52,43 +51,50 @@ export default function CRTContainer({
 
         {/* Buttons on TV Panel */}
         <div
-          className="absolute z-30 flex items-center justify-center gap-2"
+          className="absolute z-30 w-full flex justify-center"
           style={{
-            bottom: "9%",
-            left: "20%",
-            width: "60%",
+            bottom: "5%", // fine-tune based on CRTTV.png layout
+            left: "7%",
           }}
         >
-          {/* Prev Button */}
-          <button
-            onClick={onPrev}
-            className="bg-white text-black font-mono px-3 py-1 rounded text-sm"
+          <div
+            className="flex flex-wrap justify-center gap-2 px-4"
+            style={{
+              maxWidth: "800px", // wraps after this width
+              width: "100%",
+            }}
           >
-            ◀ Previous
-          </button>
-
-          {/* Channel Buttons */}
-          {[0, 1, 2, 3, 4, 5].map((i) => (
+            {/* Prev Button */}
             <button
-              key={i}
-              onClick={() => onSelectChannel(i)}
-              className={`px-3 py-1 rounded font-mono text-xs ${
-                currentChannel === i
-                  ? "bg-green-500 text-black"
-                  : "bg-white text-black"
-              }`}
+              onClick={onPrev}
+              className="bg-gray-300 text-white font-mono px-2 py-0.5 rounded-md text-xs sm:text-sm hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
             >
-              {i + 1}
+              ◀ Previous
             </button>
-          ))}
 
-          {/* Next Button */}
-          <button
-            onClick={onNext}
-            className="bg-white text-black font-mono px-3 py-1 rounded text-sm"
-          >
-            Next ▶ 
-          </button>
+            {/* Channel Buttons */}
+            {channelNames.map((name, i) => (
+              <button
+                key={i}
+                onClick={() => onSelectChannel(i)}
+                className={`px-2 py-0.5 rounded-md font-mono text-xs sm:text-sm whitespace-nowrap transition-all ${
+                  currentChannel === i
+                    ? "bg-green-400 text-white shadow-inner ring-2 ring-black"
+                    : "bg-gray-300 text-white hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
+                }`}
+              >
+                {`Channel ${i + 1}: ${name}`}
+              </button>
+            ))}
+
+            {/* Next Button */}
+            <button
+              onClick={onNext}
+              className="bg-gray-300 text-white font-mono px-2 py-0.5 rounded-md text-xs sm:text-sm hover:bg-gray-400 active:shadow-inner active:ring-2 active:ring-black"
+            >
+              Next ▶
+            </button>
+          </div>
         </div>
       </div>
     </div>
